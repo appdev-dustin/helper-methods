@@ -9,7 +9,7 @@ Rails.application.routes.draw do
           
   # READ
   get "/movies" => "movies#index" 
-  get "/movies/:id" => "movies#show", as: :details #movie_path() expexts an argument to populate :id segment
+  get "/movies/:id" => "movies#show", as: :movie #movie_path() expexts an argument to populate :id segment
   
   # UPDATE
   patch "/movies/:id" => "movies#update" 
