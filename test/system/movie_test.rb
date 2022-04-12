@@ -1,9 +1,14 @@
 require "application_system_test_case"
 
 class MoviesTest < ApplicationSystemTestCase
-  test "visiting the index" do
+  test "adding a new movie" do
     visit movies_url
-    assert_selector "h1", text: "List of all movies"
+    assert_selector "a", text: "Add a new movie"
+  end
+
+  test "should not save movie without title" do
+    movie = Movie.new
+    assert_not movie.save, "Saved the movie without a title"
   end
 
   test "creating a Movie" do
