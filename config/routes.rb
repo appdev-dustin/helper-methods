@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # Routes for the Director resource:
+
+  resources :directors
+
   root "movies#index"
 
   # Directors Resource
